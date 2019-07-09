@@ -45,9 +45,9 @@ FILES=($(ls -1 $FASTQS))
 for file in ${FILES[@]}
 do
 if [ -d "$FASTQS/$file" ];then
-qsub -l os7 -cwd ../code/scATAC/cellranger-atac.sh -i ${ID}_${file} -r $REF -f ${FASTQS}/${file}
+qsub -l os7 -cwd code/cellranger-atac.sh -i ${ID}_${file} -r $REF -f ${FASTQS}/${file}
 else
-qsub -l os7 -cwd ../code/scATAC/cellranger-atac.sh -i ${ID} -r $REF -f ${FASTQS}
+qsub -l os7 -cwd code/cellranger-atac.sh -i ${ID} -r $REF -f ${FASTQS}
 break
 fi
 done

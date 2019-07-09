@@ -6,14 +6,13 @@
 
 <<COMMENT
 usage: 
-qsub -l os7 -cwd cellranger-atac.sh -i ID_NAME -r REFERENCE \
--f FASTQS
+qsub -l os7 -cwd cellranger-atac.sh -i ID_NAME -r REFERENCE -f FASTQS
 options:
 -i ... id name
--r ... reference (GRCh38 or mm10)
+-r ... reference (GRCh38)
 -f ... path to fastqs
 description:
-analysis of fastqs by cellranger
+analysis of fastqs by cellranger-atac
 COMMENT
 
 ulimit -v unlimited
@@ -31,7 +30,4 @@ while getopts i:r:f: OPT;do
         esac
 done
 
-cellranger-atac count --id=${ID} \
- --reference=${REF}/ \
- --fastqs=${FASTQS} \
- --localcores=8 --localmem=90
+cellranger-atac count --id=${ID} --reference=${REF} --fastqs=${FASTQS} --localcores=8 --localmem=90
