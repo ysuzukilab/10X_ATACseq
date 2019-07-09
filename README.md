@@ -12,7 +12,7 @@ if you want to get more references, see [this link](https://support.10xgenomics.
 ```
 qsub -l os7 -cwd path/to/install.sh
 
-## for test
+// for test
 export PATH=tools/cellranger-atac-1.1.0:$PATH
 cellranger-atac testrun --id=tiny
 ```
