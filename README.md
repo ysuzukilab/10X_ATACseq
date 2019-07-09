@@ -4,6 +4,8 @@
 * Enter your information from [this link](https://support.10xgenomics.com/single-cell-atac/software/downloads/latest)
 * Install cellranger-atac **using your own token&id**
 ```
+mkdir tools
+cd tools
 // Example
 wget -O cellranger-atac-1.1.0.tar.gz "http://cf.10xgenomics.com/releases/cell-atac/cellranger-atac-1.1.0.tar.gz?Expires=(put your token&id)"
 ```
