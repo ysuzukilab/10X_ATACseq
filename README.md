@@ -21,7 +21,7 @@ cellranger-atac testrun --id=tiny
 2. run
 ```
 // Example
-qsub -l os7 -cwd path/to/run.sh -i ID_NAME -r path/to/REFERENCE -f path/to/FASTQS
+sh path/to/run.sh -i ID_NAME -r path/to/REFERENCE -f path/to/FASTQS
 ```
 ## directory
 ```
@@ -30,9 +30,8 @@ qsub -l os7 -cwd path/to/run.sh -i ID_NAME -r path/to/REFERENCE -f path/to/FASTQ
 |   ├── install.sh
 |   ├── cellranger-atac.sh
 |   └── run.sh
-└── _tools
-    ├─ cellranger-atac-1.1.0
-    _reference
+├── _tools
+|   ├─ cellranger-atac-1.1.0
+└── _reference
     └─ refdata-cellranger-atac-GRCh38-1.1.0
-
 ```
